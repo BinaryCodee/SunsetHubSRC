@@ -1,0 +1,147 @@
+messages:
+  player-only: "&cErrore, comando eseguibile solo per i giocatori!"
+  no-permission: "&cErrore, non hai il permesso!"
+
+lpc:
+  chat-format: "{prefix}{name}&r: {message}"
+  group-formats:
+  #  default: "[default] {name}&r: {message}"
+  #  admin: "[admin] {name}&r: {message}"
+
+events:
+  join:
+    enabled: true
+    teleport-to-spawn: true
+  respawn:
+    enabled: true
+    teleport-to-spawn: true
+  hearts-and-hunger:
+    enabled: true
+    hearts: 1
+    hunger: 20
+  block-break-place:
+    enabled: true
+    prevent-break: true
+    prevent-place: true
+  water-lava-fire:
+    enabled: true
+    prevent-drowning: true
+    prevent-fire-damage: true
+  pvp:
+    enabled: false
+  fall-damage:
+    enabled: true
+  inventory:
+    enabled: true
+    prevent-drop: true
+    prevent-move: true
+  interact:
+    enabled: true
+    prevent-interact: true
+  weather:
+    enabled: true
+  death:
+    enabled: true
+    prevent-drop: true
+  achievements:
+    enabled: true
+    allow-awards: false
+
+modules:
+  spawn:
+    permission: 'sunsethub.setspawn.admin'
+    messages:
+      not-found: "&8[&6&lSPAWN&8] &cErrore, non e' stato possibile trovare lo spawn!"
+      success: "&8[&6&lSPAWN&8] &eHai settato lo spawn con successo&6!"
+    location:
+  parkour:
+    enabled: true
+    permission: "sunsethub.parkour.admin"
+    help: "&8[&6&lPARKOUR&8] &cUsa: /parkour [help|set]"
+    setted: "&8[&6&lPARKOUR&8] &eSettato con successo lo spawn point&6!"
+    teleported: "&8[&6&lPARKOUR&8] &eHai iniziato il parkour&6!"
+    usage: "&8[&6&lPARKOUR&8] &cErrore, usa: /parkour [help|set]"
+    not-found: "&8[&6&lPARKOUR&8] &cErrore, punto di avvio del parkour non trovato!"
+    location: "world,0,64,0,0.0,0.0"
+    item:
+      material: "LADDER"
+      name: '&6Parkour'
+      lore:
+        - "&7Click-Destro per andare al parkour!"
+      main-hand: true
+      inventory-slot: 0
+  selector:
+    item:
+      material: "COMPASS"
+      name: "&6Selettore Modalita'"
+      lore:
+        - "&7Click-Destro per aprire il Selettore!"
+      main-hand: true
+      inventory-slot: 4
+  socials:
+    item:
+      material: "NETHER_STAR"
+      name: "&6Socials"
+      lore:
+        - "&7Click-Destro per visualizzare i Socials!"
+      main-hand: true
+      inventory-slot: 8
+  gamemodes:
+    permission: "sunsethub.gamemodes"
+    messages:
+      player-only: "&cErrore, comando solo per i giocatori!"
+      no-permission: "&cErrore, non hai nessun permesso!"
+      invalid-gamemode: "&8[&6&lGAMEMODES&8] &eModalità non valida: &ccreative&7, &csurvival&7, &cadventure &7e &cspectator&e!"
+      gamemode-changed: "&8[&6&lGAMEMODES&8] &eModalità impostata su: &6{gamemode}&e!"
+      gamemode-changed-for-player: "&8[&6&lGAMEMODES&8] &eHai impostato la modalità: &6{gamemode}&e per &6{player}&e!"
+      player-not-found: "&cErrore, giocatore non trovato!"
+  teleports:
+    permission: "sunsethub.teleports"
+    messages:
+      player-only: "&cErrore, comando solo per i giocatori!"
+      no-permission: "&cErrore, non hai nessun permesso!"
+      player-not-found: "&cErrore, giocatore non trovato!"
+      tp-success: "&8[&6&lTELEPORT&8] &eHai teletrasportato &6{player1}&e da &6{player2}&e!"
+      tpall-success: "&8[&6&lTELEPORT&8] &eTutti i giocatori sono stati teletrasportati da &6{player}&e!"
+      tphere-success: "&8[&6&lTELEPORT&8] &eHai teletrasportato &6{player}&e da te!"
+      usage-tp: "&cUsa: /tp [player1] [player2]"
+      usage-tpall: "&cUsa: /tpall [player]"
+      usage-tphere: "&cUsa: /tphere [player]"
+  fly:
+    permission: "sunsethub.fly"
+    messages:
+      player-only: "&cErrore, comando solo per i giocatori!"
+      no-permission: "&cErrore, non hai nessun permesso!"
+      fly-enabled: "&8[&6&lFLY&8] &eModalità volo abilitata&6!"
+      fly-disabled: "&8[&6&lFLY&8] &eModalità volo disabilitata&6!"
+  scoreboard:
+    lobby:
+      title: "&6&lHUB"
+      lore:
+        - "&7%date%"
+        - " "
+        - "&eNome: &f%player%"
+        - "&eRank: &f%rank%"
+        - "&eAmici: &fSoon"
+        - "  "
+        - "&eOnline: &f%online%"
+        - "&ePing: &f%ping%"
+        - "   "
+        - "&7&oplay.sunsetpvp.it"
+    staff:
+      title: "&6&lSTAFF"
+      lore:
+        - "&7%date%"
+        - " "
+        - "&eNome: &f%player%"
+        - "&eRank: &f%rank%"
+        - "&eOnline: &f%online%"
+        - "&ePing: &f%ping%"
+        - "  "
+        - "&eRAM: &f%ram%"
+        - "&eCPU: &f%cpu%"
+        - "&eTPS: &f%tps%"
+        - "   "
+        - "&7&oplay.sunsetpvp.it"
+      permission: 'sunsethub.staff'
+      update-interval: 10

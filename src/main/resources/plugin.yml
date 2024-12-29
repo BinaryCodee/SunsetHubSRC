@@ -1,0 +1,17 @@
+name: SunsetHub
+version: '${project.version}'
+main: dev.binarycodee.sunsethub.Core
+depends: [NBTAPI, LuckPerms, PlaceholderAPI]
+commands:
+  sunsethub:
+  spawn:
+  setspawn:
+  parkour:
+  gmc:
+  gms:
+  gmsp:
+  gma:
+  fly:
+  tp:
+  tpall:
+  tphere:
